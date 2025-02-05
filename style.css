@@ -11,8 +11,6 @@ body {
 .loader{
     animation:loader 5s;
     height: 0;
-    position:relative;
-    z-index: 999;
 }
 
 .page{
@@ -30,6 +28,9 @@ body {
   }
   to{
     height:0;
+    display:flex;
+    align-items: start;
+    /* justify-content: start; */
   }
 }
 .logo{
