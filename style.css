@@ -1,40 +1,102 @@
 * {
   box-sizing: border-box;
 }
- body {
+
+body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: #f2f2f2 !important;
+  background-color: #ffffff !important;
+}
+.loader{
+    animation:loader 5s;
+    height: 0;
+    position:relative;
+    z-index: 999;
 }
 
-.nav-bar{
-  display:flex;
+.page{
+  
+}
+
+@keyframes loader {
+  from{
+    width:100%;
+    height:100vh;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  to{
+    height:0;
+  }
+}
+.logo{
+  visibility: hidden;
+}
+.nav-bar {
+  display: flex;
   align-items: center;
-  justify-content:space-between;
-  padding:20px;
+  justify-content: space-between;
+  padding: 20px;
   background-color: #fcfcfc;
   /* margin:20px 0; */
 }
-a{
+
+a {
   text-decoration: none;
 }
 
-header{
+header {
   background-color: #fcfcfc;
-  height:auto;
+  height: auto;
+
   /* padding:20px 0; */
-  a{
+  a {
     text-decoration: none;
-    padding:0 10px;
+    padding: 0 10px;
+  }
+
+  .link:after {
+    content: "hello world";
+  }
+
+  .link:nth-child(1):after {
+    content: "Home";
+  }
+
+  .link:nth-child(2):after {
+    content: "About";
+  }
+
+  .link:nth-child(3):after {
+    content: "Contact";
+  }
+
+  .link:nth-child(4):after {
+    content: "Blog";
   }
 }
 
-main{
-   width:100%;
-   height:100vh;
+main {
+  width: 100%;
+  height: 100vh;
+  background:#f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .home-heading:after {
+    content: "This is Home Page";
+  }
+
+  .about-heading:after {
+    content: "This is About Page";
+  }
 }
-footer{
+
+footer {
   background: #0f0f0f;
   height: 40vh;
   display: flex;
