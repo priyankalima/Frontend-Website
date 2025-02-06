@@ -9,7 +9,7 @@ body {
   background-color: #ffffff !important;
 }
 .loader{
-    animation:loader 4s;
+    animation:loader 7s;
     animation-timing-function: linear;
     background:#fff;
     width:100%;
