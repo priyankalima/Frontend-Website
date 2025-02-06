@@ -44,7 +44,7 @@ body {
   }
 }
 .logo{
-  visibility: hidden;
+  /* visibility: hidden; */
   img{
     width:50px;
   }
@@ -88,6 +88,8 @@ header {
 
   .link:nth-child(1):after {
     content: "Home";
+    font-weight: bold;
+    color:#000;
   }
 
   .link:nth-child(2):after {
