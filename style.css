@@ -9,7 +9,7 @@ body {
   background-color: #ffffff !important;
 }
 .loader{
-    animation:loader 5s;
+    animation:loader 6s;
     animation-timing-function: linear;
     background:#fff;
     width:100%;
@@ -28,7 +28,7 @@ body {
     justify-content: center;
     /* align-content: center; */
   }
-  65%{
+  60%{
     height:0;
     display:flex;
     /* align-items: center; */
@@ -64,6 +64,11 @@ header {
   a {
     text-decoration: none;
     padding: 0 10px;
+    color:#0f0f0f;
+  }
+  a:hover{
+    font-weight: bold;
+    color:#000;
   }
 
   .link:after {
