@@ -21,17 +21,17 @@ body {
 }
 
 @keyframes loader {
-  from{
+  0%{
     height:100vh;
     display:flex;
     align-items: center;
     justify-content: center;
     /* align-content: center; */
   }
-  to{
+  65%{
     height:0;
     display:flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
   }
 }
