@@ -1,0 +1,28 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* grobal variable */
+:root{
+    --grey-color:#f2f2f2;
+    --light-color:#fcfcfc;
+    --dark-color:#0f0f0f;
+    --theme-color:tomato;
+    --font-family:"Roboto", serif;
+    --font-bold:800;
+    --font-semi-bold:700;
+    --font-medium:600;
+    --font-regular:400;
+    --font-light:400;
+    --font-extra-light:200;
+}
+body{
+    background-color:var(--light-color) !important;
+    color:var(--dark-color) !important;
+    font-weight: var(--font-regular) !important;
+    font-family: var(--font-family) !important;
+}
+
+/* header */
+.header{
+    background:var(--light-color);
+    padding:30px 0;
+}
