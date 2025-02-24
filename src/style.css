@@ -43,12 +43,13 @@ header{
     background:#fcfcfc;
     width:100%;
     height:auto;
+    position:fixed;
     
     nav{
         justify-content:space-between;
         align-items:center;
         padding:20px 0;
-        position:fixed;
+        width:100%;
         /* z-index: 1; */
         /* background:green; */
        }
@@ -93,7 +94,7 @@ header{
     }
     input[type="checkbox"]:checked+label+.menu-lists{
         /* display: block; */
-        height:100vh;
+        height:60vh;
         position: fixed;
         display:flex;
         flex-direction: column;
