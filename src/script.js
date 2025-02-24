@@ -14,12 +14,11 @@ header.append(
         {
             className:"container d-flex",
             innerHTML: `
-            <a href="#"><img src="https://www.logologo.com/logos/abstract-isometric-logo-design-free-logo.jpg" width="100" alt="logo"></a>
+            <a href="#"><img src="https://www.logologo.com/logos/abstract-isometric-logo-design-free-logo.jpg" width="60" alt="logo"></a>
             <div class="menu-container">
-               <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample">Click</a>
+               <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
                <div class="offcanvas-end menu"  id="offcanvasExample">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
                         <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
