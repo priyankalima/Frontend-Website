@@ -29,21 +29,34 @@ header.append(
             `,
             function: addEventListener("load",()=>{
                 // alert('hello world');
-                    const media = window.matchMedia("(max-width: 700px)");
-                    const offcanva = document.getElementById("offcanvasExample");
-                    // console.log(offcanva);
-                    function mediaQuery(media){
-                            if(media.matches){
-                                 offcanva.classList.add("offcanvas");
-                            }
-                            else {
-                                 offcanva.classList.remove("offcanvas");
-                            }
+                    // const media = window.matchMedia("(max-width: 700px)");
+                    // const offcanva = document.getElementById("offcanvasExample");
+                    // // console.log(offcanva);
+                    // function mediaQuery(media){
+                    //         if(media.matches){
+                    //              offcanva.classList.add("offcanvas");
+                    //         }
+                    //         else {
+                    //              offcanva.classList.remove("offcanvas");
+                    //         }
+                    //     }
+                    // mediaQuery(media);
+                    // media.addEventListener("change",function(){
+                    //     mediaQuery(media);
+                    // })
+
+                    // active links
+                    const activePage = window.location.pathname;
+                    // console.log(activePage);
+                    const navLink = document.querySelectorAll('.menu-lists a').forEach(link=>{
+                        // console.log(link.href)
+                        if(link.href.includes(`${activePage}`)){
+                            console.log(`${activePage}`);
+                            // link.classList.add('active');
                         }
-                    mediaQuery(media);
-                    media.addEventListener("change",function(){
-                        mediaQuery(media);
                     })
+                    // console.log(navLink);
+                    
             })
         }
     )

@@ -125,13 +125,16 @@ header{
 /* toogle menu */
 
     input{display:none;}
-    a{
+    a:is(:link,:active,:visited){
         text-decoration: none !important;
         padding:0 10px;
         text-transform: capitalize;
         color:var(--dark-color);
         background: transparent;
         @media(max-width:600px){font-size: 24px;color:var(--light-color) !important;padding:10px 0;}
+    }
+    a:is(:link,:active,:visited).active{
+        background-color: var(--theme-color);
     }
     .menu-toggle{
         display:none;
@@ -167,3 +170,4 @@ header{
         background:#f2f2f2;
         /* h1{padding-top: 7pc !important;} */
     }
+    
