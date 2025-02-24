@@ -50,3 +50,13 @@ header.append(
         }
     )
 )
+
+// create a preloader
+const preloader = document.createElement('div');
+preloader.className="preloader";
+document.body.appendChild(preloader);
+// load page on window load
+window.onload = function(){
+    //hide the preloader
+    document.querySelector(".preloader").style.display = "none";
+}
