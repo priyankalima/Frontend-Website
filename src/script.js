@@ -22,9 +22,9 @@ header.append(
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-toggle"></label>
             <div class="menu-lists">
-                    <a href="/">home</a>
-                    <a href="/about/about-us.html">about</a>
-                    <a href="/contact/contact-us.html">contact</a>
+                    <a class="link" href="/">home</a>
+                    <a class="link" href="/about/about-us.html">about</a>
+                    <a class="link" href="/contact/contact-us.html">contact</a>
                 </div>
             `,
             function: addEventListener("load",()=>{
@@ -48,15 +48,13 @@ header.append(
                     // active links
                     const activePage = window.location.pathname;
                     // console.log(activePage);
-                    const navLink = document.querySelectorAll('.menu-lists a').forEach(link=>{
-                        // console.log(link.href)
-                        if(link.href.includes(`${activePage}`)){
-                            console.log(`${activePage}`);
-                            // link.classList.add('active');
+                    const navLink = document.querySelectorAll('.link');
+                    navLink.forEach(link=>{
+                        console.log(link.pathname);
+                        if(link.pathname == activePage){
+                            link.classList.add('active');
                         }
                     })
-                    // console.log(navLink);
-                    
             })
         }
     )

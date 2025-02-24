@@ -135,6 +135,9 @@ header{
     }
     a:is(:link,:active,:visited).active{
         background-color: var(--theme-color);
+        padding:5px 10px;
+        color: var(--light-color);
+        border-radius: 5px;
     }
     .menu-toggle{
         display:none;
