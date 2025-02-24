@@ -48,7 +48,7 @@ header{
     nav{
         justify-content:space-between;
         align-items:center;
-        padding:20px 0;
+        padding:10px 0;
         width:100%;
         height:auto;
         /* position: relative !important; */
@@ -151,7 +151,7 @@ header{
           background:var(--dark-color);
           width:100%;
           left:0;
-          top:6pc;
+          top:5pc;
           transition:height 2s;
           display:flex;
         flex-direction: column;
