@@ -11,45 +11,15 @@
     </head>
     <body>
         <!-- learn about the function -->
-        <header>
-            <nav class="container d-flex">
-                <!-- logo -->
-                <a href="#" class="logo">LOGO</a>
-                <!-- menu container list -->
-                <div class="menu-container">
-                    <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample">Click</a>
-                    <div class="offcanvas-end menu"  id="offcanvasExample">
-                      <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                      </div>
-                      <div class="offcanvas-body">
-                        <a href="#">home</a>
-                        <a href="#">about</a>
-                        <a href="#">contact</a>
-                      </div>
-                    </div>
-                </div>
-                <script>
-                    const media = window.matchMedia("(max-width: 700px)");
-                    const offcanva = document.getElementById("offcanvasExample");
-                    // console.log(offcanva);
-                    function mediaQuery(media){
-                            if(media.matches){
-                                 offcanva.classList.add("offcanvas");
-                            }
-                            else {
-                                 offcanva.classList.remove("offcanvas");
-                            }
-                        }
-                    mediaQuery(media);
-                    media.addEventListener("change",function(){
-                        mediaQuery(media);
-                    })
-                </script>
-            </nav>
-        </header>
-        <main></main>
-        <footer></footer>
+        <header id="header"></header>
+        <main>
+          <section>
+            <div class="container">
+              <h1>this is home page</h1>
+            </div>
+          </section>
+        </main>
+        <footer id="footer"></footer>
+        <script src="src/script.js"></script>
     </body>
 </html>
