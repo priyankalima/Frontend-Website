@@ -58,5 +58,8 @@ document.body.appendChild(preloader);
 // load page on window load
 window.onload = function(){
     //hide the preloader
-    document.querySelector(".preloader").style.display = "none";
+    setTimeout(function(){
+        // document.querySelector(".preloader").style.display = "none";
+        document.querySelector(".preloader").classList.add('fade');
+    },1000);
 }
