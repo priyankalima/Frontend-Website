@@ -70,7 +70,7 @@ header{
         @media(max-width:600px){flex-direction:column;}
     }
 
-    a{text-decoration:none;padding:0 10px;color:var(--dark-color);
+    a{text-decoration:none;padding:0 10px;color:var(--dark-color) !important;
         text-transform: capitalize;
     @media(max-width:600px){
         font-size: 24px;
@@ -158,7 +158,7 @@ header{
           width:100%;
           left:0;
           top:5pc;
-          transition:height 2s;
+          transition:height 1s;
           display:flex;
         flex-direction: column;
         align-items: center;

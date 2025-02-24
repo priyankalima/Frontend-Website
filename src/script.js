@@ -1,17 +1,4 @@
 // append header and footer element of if can convent html to text
-{/* <div class="menu-container">
-               <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
-               <div class="offcanvas-bottom menu"  id="offcanvasExample">
-                    <div class="offcanvas-header">
-                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <a href="/">home</a>
-                        <a href="/about/about-us.html">about</a>
-                        <a href="/contact/contact-us.html">contact</a>
-                    </div>
-               </div>
-            </div> */}
 header.append(
     Object.assign(
         document.createElement('nav'),
@@ -72,3 +59,26 @@ window.onload = function(){
         document.querySelector(".preloader").classList.add('fade');
     },1000);
 }
+
+
+
+{/* <div class="menu-container">
+               <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
+               <div class="offcanvas-bottom menu"  id="offcanvasExample">
+                    <div class="offcanvas-header">
+                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="/">home</a>
+                        <a href="/about/about-us.html">about</a>
+                        <a href="/contact/contact-us.html">contact</a>
+                    </div>
+               </div>
+            </div> */}
+            // <input type="checkbox" id="menu-toggle">
+            // <label for="menu-toggle" class="menu-toggle"></label>
+            // <div class="menu-lists">
+            //         <a class="link" href="/">home</a>
+            //         <a class="link" href="/about/about-us.html">about</a>
+            //         <a class="link" href="/contact/contact-us.html">contact</a>
+            //     </div>
