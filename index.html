@@ -1,238 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <!-- Title -->
-        <title>hello world!</title>
-        <!-- Meta Tag  -->
-         <meta charset="UTF-8">
-          <meta name="description" content="Free Web tutorials">
-          <meta name="keywords" content="HTML, CSS, JavaScript">
-          <meta name="author" content="John Doe">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <meta http-equiv="refresh" content="300"> -->
-        <!-- For FavIcon -->
-        <link 
-            rel="icon" 
-            type="image/x-icon" 
-            href="/src/assets/logo.png">
-        <!-- For StyleSheet -->
-        <link 
-            rel="stylesheet"
-            type="text/css"
-            href="src/style.css">
-        <!-- Boostrap CDN -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>web page</title>
+        <link href="src/style.css" rel="stylesheet">
+        <!-- boostrap cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <header id="header" class="header">
+        <!-- learn about the function -->
+        <header>
             <nav class="container d-flex">
-                <a href="#" class="logo">
-                    <img 
-                    src="/src/assets/logo.png" 
-                    alt="logo"
-                    width="40">
-                </a>
-                <input type="checkbox" id="toggle-menu">
-                <label for="toggle-menu" class="toggle-menu-open"style="z-index: 1111;" ></label>
-                <div class="menu">
-                    <a href="/">Home</a>
-                    <a href="/about/about-us.html">About</a>
-                    <a href="/contact/contact-us.html">Contact</a>
+                <!-- logo -->
+                <a href="#" class="logo">LOGO</a>
+                <!-- menu container list -->
+                <div class="menu-container">
+                    <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample">Click</a>
+                    <div class="offcanvas-end menu"  id="offcanvasExample">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <a href="#">home</a>
+                        <a href="#">about</a>
+                        <a href="#">contact</a>
+                      </div>
+                    </div>
                 </div>
+                <script>
+                    const media = window.matchMedia("(max-width: 700px)");
+                    const offcanva = document.getElementById("offcanvasExample");
+                    // console.log(offcanva);
+                    function mediaQuery(media){
+                            if(media.matches){
+                                 offcanva.classList.add("offcanvas");
+                            }
+                            else {
+                                 offcanva.classList.remove("offcanvas");
+                            }
+                        }
+                    mediaQuery(media);
+                    media.addEventListener("change",function(){
+                        mediaQuery(media);
+                    })
+                </script>
             </nav>
         </header>
-        <main id="main" class="">
-            <section>
-                <div class="container pt-2 pb-2">
-                   <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 mt-2 mb-2">
-                      <div class="text-formate ">
-                        <h1 class="heading">Join the innovation <br> presentation</h1>
-                        <p style="color:var(--dark-color);opacity: 80%;">presenting new around the innovation part</p>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 mt-2 mb-2">
-                      <div style="
-                        border:1px solid #d2d1d1;
-                        padding:20px;
-                        border-radius: 20px;
-                        ">
-                        <!-- <h1 class="heading">Join the innovation presentation</h1> -->
-                        <p style="color:var(--dark-color);opacity: 50%;">Join our revolution solution for the</p>
-                        <button style="
-                        padding:10px 20px;
-                        border:none;
-                        border-radius:30px;
-                        background-color: var(--dark-color);
-                        color:var(--light-color);">Joine Now</button>
-                       </div>
-                    </div>
-                   </div>
-                </div>
-            </section>
-            <section>
-                <div class="media">
-                  <!-- <p>hello world</p> -->
-                    <!-- images -->
-                    <img 
-                        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        style="width:100%;">
-                    <video width="300" height="200" style="background-color:green;">
-                        <source src="demo.mp4" type="video/mp4">
-                    </video>
-                    <audio controls>
-                        <source src="" type="audio/mp3">
-                    </audio>
-                    <!-- <object style="height:100px;width:100%;background-color:blue;" data="snippet.html"></object> -->
-                    <embed width="100%" height="50px" src="">
-                    <marquee width=150px
-                     bgcolor="Green"
-                     direction="left"
-                     loop="">
-                       Right
-                    </marquee>
-                    <picture>
-                      <source media="(min-width:650px)" srcset="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg">
-                      <source media="(min-width:465px)" srcset="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=">
-                         <img 
-                        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        style="width:100%;">
-                    </picture>
-                     <object style="width:100%;" data="src/header.html"></object>
-                </div>
-            </section>
-            <section>
-                <div class="content">
-                    <button>i am button</button>
-                    <time datetime="2008-02-14 20:00">Valentines day</time>
-                    <template>
-                      <h2>Flower</h2>
-                      <img src="img_white_flower.jpg" width="214" height="204">
-                    </template>
-                     <ul>
-                        <data value="350"><li>banana</li></data>
-                        <li>apple</li>
-                        <li>mango</li>
-                    </ul>
-                    <ol>
-                        <li>banana</li>
-                        <li>apple</li>
-                        <li>mango</li>
-                    </ol>
-                    <hgroup>
-                      <h2>Norway</h2>
-                      <p>The land with the midnight sun.</p>
-                    </hgroup>
-                    <figure>
-                      <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
-                      <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                        <button>click here</button>
-                    </figure>
-                    <dialog open>
-                      <p>Greetings, one and all!</p>
-                      <form method="dialog">
-                        <button>OK</button>
-                      </form>
-                    </dialog>
-                    <table>
-                        <colgroup>
-                            <col span="2" style="background-color:green;">
-                        </colgroup>
-                        <tr>
-                            <td>saving</td>
-                            <td>spending</td>
-                        </tr>
-                        <tr>
-                            <td>rs.2345</td>
-                            <td>rs.1125</td>
-                        </tr>
-                    </table>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Month</th>
-                          <th>Savings</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>January</td>
-                          <td>$100</td>
-                        </tr>
-                        <tr>
-                          <td>February</td>
-                          <td>$80</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td>Sum</td>
-                          <td>$180</td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                    <details>
-                    <caption>Paragraph</caption>
-                    <summary>
-                        hiii
-                    </summary>
-                    </details>
-                    <article>
-                        <h1>this is article heading</h1>
-                        <p>this paragraph</p>
-                    </article>
-                    <address>
-                        banflore
-                        +97t3467r89394
-                        india
-                    </address>
-                </div>
-            </section>
-            <section>
-                <div class="form">
-                    <search>
-                        <form>
-                            <input type="text" 
-                                   placeholder="Enter name">
-                        </form>
-                    </search>
-                      <form>
-                        <input type="search" name="fsrch" id="fsrch" placeholder="Search W3Schools">
-                          <input type="text" placeholder="enter your name">
-                          <input type="date">
-                          <input type="color">
-                          <input type="checkbox">
-                            <input type="color">
-                            <input type="date">
-                            <input type="datetime-local">
-                            <input type="email">
-                            <input type="file">
-                            <input type="hidden">
-                            <input type="image">
-                            <input type="month">
-                            <input type="number">
-                            <input type="password">
-                            <input type="radio">
-                            <input type="range">
-                            <input type="reset">
-                            <input type="search">
-                            <input type="submit">
-                            <input type="tel">
-                            <input type="text"> (default value)
-                            <input type="time">
-                            <input type="url">
-                            <input type="week">
-                          <input type="button" value="click me">
-                          <input type="submit" value="submit">
-                      </form>
-                    
-                </div>
-            </section>
-        </main>
-        <footer id="footer">
-            <div class="datails"></div>
-        </footer>
-        <script src="src/script.js"></script>
+        <main></main>
+        <footer></footer>
     </body>
 </html>
