@@ -92,7 +92,7 @@ header{
     
     input[type="checkbox"]:checked+label:after{
         /* color:green !important; */
-        content:url('/src/assets/menu-icon-close.svg');
+        content:url('/src/assets/menu-icon-cancel.svg');
     }
     input[type="checkbox"]:checked+label+.menu-lists{
         /* display: block; */
@@ -135,6 +135,7 @@ header{
     }
     .menu-toggle{
         display:none;
+        cursor: pointer;
         @media(max-width:600px){
             display:block;
         }
