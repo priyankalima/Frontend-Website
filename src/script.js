@@ -17,7 +17,7 @@ header.append(
             <a href="#"><img src="https://www.logologo.com/logos/abstract-isometric-logo-design-free-logo.jpg" width="60" alt="logo"></a>
             <div class="menu-container">
                <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
-               <div class="offcanvas-top menu"  id="offcanvasExample">
+               <div class="offcanvas-bottom menu"  id="offcanvasExample">
                     <div class="offcanvas-header">
                         <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
