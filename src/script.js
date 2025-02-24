@@ -1,21 +1,5 @@
-// // append header and footer element of if can convent html to text
-
-// // find the filepaths using js
-// // alert(window.location.href);
-// // window.location.hostname
-// // window.location.pathname
-// // window.location.protocol
-// // window.location.assign("some url");
-// // alert(window.location.pathname);
-
-header.append(
-    Object.assign(
-        document.createElement('nav'),
-        {
-            className:"container d-flex",
-            innerHTML: `
-            <a href="#"><img src="https://www.logologo.com/logos/abstract-isometric-logo-design-free-logo.jpg" width="60" alt="logo"></a>
-            <div class="menu-container">
+// append header and footer element of if can convent html to text
+{/* <div class="menu-container">
                <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
                <div class="offcanvas-bottom menu"  id="offcanvasExample">
                     <div class="offcanvas-header">
@@ -27,7 +11,21 @@ header.append(
                         <a href="/contact/contact-us.html">contact</a>
                     </div>
                </div>
-            </div>
+            </div> */}
+header.append(
+    Object.assign(
+        document.createElement('nav'),
+        {
+            className:"container d-flex",
+            innerHTML: `
+            <a href="#"><img src="https://www.logologo.com/logos/abstract-isometric-logo-design-free-logo.jpg" width="60" alt="logo"></a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle"></label>
+            <div class="menu-lists">
+                    <a href="/">home</a>
+                    <a href="/about/about-us.html">about</a>
+                    <a href="/contact/contact-us.html">contact</a>
+                </div>
             `,
             function: addEventListener("load",()=>{
                 // alert('hello world');
@@ -59,7 +57,7 @@ document.body.appendChild(preloader);
 window.onload = function(){
     //hide the preloader
     setTimeout(function(){
-        // document.querySelector(".preloader").style.display = "none";
+        document.querySelector(".preloader").style.display = "none";
         document.querySelector(".preloader").classList.add('fade');
     },1000);
 }
