@@ -10,9 +10,14 @@ header.append(
             <label for="menu-toggle" class="menu-toggle"></label>
             <div class="menu-lists">
                     <a class="link active section-one" href="#section-one">home</a>
+                    <a class="link drop-down" href="#"><i class="icon"></i></a>
+                    <div class="drop-down-container">
+                        <a href="/about/about-us.html">another link</a>
+                        <a href="/contact/contact-us.html">another link 2</a>
+                    </div>
                     <a class="link section-two" href="#section-two">about</a>
                     <a class="link section-three" href="#section-three">contact</a>
-                </div>
+            </div>
             `,
             function: addEventListener("load",()=>{
                 // alert('hello world');
