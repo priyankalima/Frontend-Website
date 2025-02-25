@@ -9,9 +9,9 @@ header.append(
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-toggle"></label>
             <div class="menu-lists">
-                    <a class="link" href="#section-one">home</a>
-                    <a class="link" href="#section-two">about</a>
-                    <a class="link" href="#section-three">contact</a>
+                    <a class="link active section-one" href="#section-one">home</a>
+                    <a class="link section-two" href="#section-two">about</a>
+                    <a class="link section-three" href="#section-three">contact</a>
                 </div>
             `,
             function: addEventListener("load",()=>{
@@ -33,15 +33,15 @@ header.append(
                     // })
 
                     // active links
-                    const activePage = window.location.pathname;
-                    // console.log(activePage);
-                    const navLink = document.querySelectorAll('.link');
-                    navLink.forEach(link=>{
-                        console.log(link.pathname);
-                        if(link.pathname == activePage){
-                            link.classList.add('active');
-                        }
-                    })
+                    // const activePage = window.location.pathname;
+                    // // console.log(activePage);
+                    // const navLink = document.querySelectorAll('.link');
+                    // navLink.forEach(link=>{
+                    //     console.log(link.pathname);
+                    //     if(link.pathname == activePage){
+                    //         link.classList.add('active');
+                    //     }
+                    // })
             })
         }
     )
@@ -58,6 +58,32 @@ window.onload = function(){
         document.querySelector(".preloader").style.display = "none";
         document.querySelector(".preloader").classList.add('fade');
     },1000);
+}
+
+// active links while  on scroll
+const links = document.querySelectorAll('.link');
+const sections = document.querySelectorAll('section');
+console.log(sections);
+
+window.onscroll =()=>{
+    sections.forEach(sec=>{
+        // console.log(sec)
+        let top = window.scrollY;
+        let offset = sec.offsetTop;
+        
+        if(top >= offset - 60){
+            let id = sec.getAttribute('id');
+            console.log(id)
+            links.forEach(link=>{
+                console.log(link.getAttribute('href'))
+                link.classList.remove('active');
+                if(link.classList.contains(id)){
+                    // console.log('yes')
+                    link.classList.add('active');
+                }
+            })
+        }
+    })
 }
 
 
