@@ -18,7 +18,7 @@
     /* background-color:var(--light-color); */
     color:var(--dark-color);
     font-weight: var(--font-regular);
-    font-family: var(--font-family);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* header */
@@ -43,7 +43,7 @@ header{
     background:#fcfcfc;
     width:100%;
     height:auto;
-    /* position:fixed; */
+    position:fixed;
     
     nav{
         justify-content:space-between;
@@ -125,7 +125,7 @@ header{
 /* toogle menu */
 
     input{display:none;}
-    a:is(:link,:active,:visited){
+    a{
         text-decoration: none !important;
         padding:0 10px;
         text-transform: capitalize;
@@ -133,12 +133,7 @@ header{
         background: transparent;
         @media(max-width:600px){font-size: 24px;color:var(--light-color) !important;padding:10px 0;}
     }
-    a:is(:link,:active,:visited).active{
-        background-color: var(--theme-color);
-        padding:5px 10px;
-        color: var(--light-color);
-        border-radius: 5px;
-    }
+   
     .menu-toggle{
         display:none;
         cursor: pointer;
@@ -165,12 +160,29 @@ header{
         justify-content: center;
         }
     }
-
-
     .banner{
         width:100%;
         height:100vh;
         background:#f2f2f2;
         /* h1{padding-top: 7pc !important;} */
     }
+
+section:nth-child(1){
+    background-color:#f2f2f2;
+    height:100vh;
+}
+section:nth-child(2){
+    background-color:#fdfdfd;
+    height:100vh;
+}
+section:nth-child(3){
+    background-color:#0f0f0f;
+    height:100vh;
+}
     
+a:hover,section#section-one:hover ~ .menu-lists a[href="#section-one"]{
+    background-color: var(--theme-color);
+    padding:5px 10px;
+    color: var(--light-color);
+    border-radius: 5px;
+}

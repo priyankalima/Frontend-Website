@@ -9,9 +9,9 @@ header.append(
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-toggle"></label>
             <div class="menu-lists">
-                    <a class="link" href="/">home</a>
-                    <a class="link" href="/about/about-us.html">about</a>
-                    <a class="link" href="/contact/contact-us.html">contact</a>
+                    <a class="link" href="#section-one">home</a>
+                    <a class="link" href="#section-two">about</a>
+                    <a class="link" href="#section-three">contact</a>
                 </div>
             `,
             function: addEventListener("load",()=>{
