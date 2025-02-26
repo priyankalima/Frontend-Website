@@ -5,7 +5,7 @@ header.append(
         {
             className:"container d-flex nav",
             innerHTML: `
-            <a href="/"><img src="/src/assets/logo.svg" width="50" alt="logo" style="padding:10px 0;"></a>
+            <a href="/"><img src="/src/assets/logo.svg" width="60" alt="logo" style="padding:10px;"></a>
             <div class="menu-container">
                 <a data-bs-toggle="offcanvas" class="menu-icon" href="#offcanvasExample"></a>
                 <div class="offcanvas-top menu"  id="offcanvasExample">
